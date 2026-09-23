@@ -1,4 +1,4 @@
-void call(String gw) {
+void call(String backupFile, String gw) {
 
   withCredentials([usernamePassword(
     credentialsId: 'apigwcredential',
@@ -8,7 +8,7 @@ void call(String gw) {
 
     sh """
       chmod +x common.sh
-      ./common.sh rollback_api "${env.BACKUP_FILE}" "${gw}" "$U" "$P"
+      ./common.sh rollback_api "${backupFile}" "${gw}" "$U" "$P"
     """
   }
 }
