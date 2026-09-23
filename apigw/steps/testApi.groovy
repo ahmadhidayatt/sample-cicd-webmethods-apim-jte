@@ -11,7 +11,7 @@ void call(String gw, String esUrl) {
       mkdir -p test-results
 
       /usr/bin/docker run --rm \
-        -v \$PWD:/etc/newman \
+        -v \$PWD:/etc/newman:Z \
         -w /etc/newman \
         docker.io/postman/newman:latest \
         run apigw-pipeline/tests/collection.json \
