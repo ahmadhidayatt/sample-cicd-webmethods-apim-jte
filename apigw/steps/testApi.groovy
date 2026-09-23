@@ -13,7 +13,7 @@ void call(String gw, String esUrl) {
       /usr/bin/docker run --rm \
         -v \$PWD:/etc/newman \
         -w /etc/newman \
-        postman/newman:latest \
+        docker.io/postman/newman:latest \
         run apigw-pipeline/tests/collection.json \
         -e apigw-pipeline/tests/environment.json \
         --env-var username=$U \
