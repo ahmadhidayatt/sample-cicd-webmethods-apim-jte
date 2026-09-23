@@ -10,7 +10,7 @@ void call(String gw, String esUrl) {
       rm -rf test-results
       mkdir -p test-results
 
-      docker run --rm \
+      /usr/bin/docker run --rm \
         -v \$PWD:/etc/newman \
         -w /etc/newman \
         postman/newman:latest \
